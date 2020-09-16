@@ -46,9 +46,5 @@ public class PersonaController {
         return servicio.listarPersona();
     }
     
-   @DeleteMapping (value= "/empleados/delete/{id}")
-    public String deleteEmpleado (@RequestParam int id){
-        return servicio.deleteEmpleyo(id);
-    }
-    
+  
 }

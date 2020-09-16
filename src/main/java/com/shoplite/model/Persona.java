@@ -8,10 +8,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 //crea en Mongodb la collection
 @Document
 public class Persona {
-    @Id
-private int id_persona;
-private String cedula;
-private String apellido;
-private String email;
-private String telefono;
+    
+    private int id_persona;
+    
+    private String cedula;
+    private String apellido;
+    private String email;
+    private String telefono;
 }
