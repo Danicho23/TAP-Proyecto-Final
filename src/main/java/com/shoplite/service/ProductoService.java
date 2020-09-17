@@ -12,11 +12,11 @@ import com.shoplite.repository.IProductos;
 public class ProductoService {
 	@Autowired
     private IProductos repoProduct;
-	public Productos crearUsuarios(Productos product) {
+	public Productos crearProductos(Productos product) {
 		return repoProduct.save(product);
 	}
 	
-	public List<Productos> listUsers() {
+	public List<Productos> listProductos() {
         return repoProduct.findAll();
     }
 }

@@ -14,11 +14,11 @@ public class CategoriaService {
 	@Autowired
     private ICategoria repoCateg;
 	
-	public Categoria crearUsuarios(Categoria categ) {
+	public Categoria crearCategoria(Categoria categ) {
 		return repoCateg.save(categ);
 	}
 	
-	public List<Categoria> listUsers() {
+	public List<Categoria> listCategoria() {
         return repoCateg.findAll();
     }
 }
