@@ -5,10 +5,16 @@
  */
 package com.shoplite.service;
 
+import com.shoplite.repository.IOrden;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author LENOVO
  */
+@Service
 public class OrdenService {
-    
+     @Autowired
+     private IOrden repositorio;
 }

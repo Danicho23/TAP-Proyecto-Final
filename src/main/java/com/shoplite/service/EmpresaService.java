@@ -5,10 +5,17 @@
  */
 package com.shoplite.service;
 
+import com.shoplite.repository.IEmpresa;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author LENOVO
  */
+
+@Service
 public class EmpresaService {
-    
+     @Autowired
+     private IEmpresa repositorio;
 }
