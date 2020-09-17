@@ -30,8 +30,5 @@ public class PersonaService {
         return repositorio.findAll();
     }
 
-    public String deleteEmpleyo(Persona per) {
-        repositorio.delete(per);
-        return "product removed" + per;
-    }
+
 }
