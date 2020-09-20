@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Empresa {
     @Id
-    private int id_provedor;
-    private String id_cedula_persona;
+    private String id;
+    private String id_persona;
     private String fecha;
     private int calificacion;
 }

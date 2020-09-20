@@ -46,5 +46,9 @@ public class PersonaController {
         return servicio.listarPersona();
     }
     
+     @DeleteMapping (value= "/empleados/delete/{id}")
+    public String delete (@PathVariable String id){
+        return servicio.deleteEmpleyo(id);
+    }
   
 }

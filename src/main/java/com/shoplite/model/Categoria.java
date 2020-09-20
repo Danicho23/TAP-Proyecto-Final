@@ -11,7 +11,7 @@ import lombok.Data;
 @Document
 public class Categoria {
 	@Id
-	public String idCategoria;
+	public String id;
 	public String idProductos;
 	public String nombreCategoria;
 }

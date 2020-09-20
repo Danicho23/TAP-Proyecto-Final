@@ -11,8 +11,8 @@ import lombok.Data;
 @Document
 public class Usuario {
 	@Id
-	public String idUser;
-	public String IdPersona;
+	public String id;
+	public String id_persona;
 	public String userName;
 	public String password;
 	public String userType;

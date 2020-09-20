@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Orden {
     @Id
-private int idorde;
-private int idPersona;
-private int idProductos;
+private String id;
+private String id_Persona;
+private String idProductos;
 
 }

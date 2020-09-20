@@ -30,5 +30,10 @@ public class PersonaService {
         return repositorio.findAll();
     }
 
+  public String deleteEmpleyo(String id) {
+        repositorio.deleteById(Integer.parseInt(id));
+        return " removed person : " + id;
+
+    }
 
 }
