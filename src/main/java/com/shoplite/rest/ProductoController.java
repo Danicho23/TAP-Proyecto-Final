@@ -16,20 +16,20 @@ import com.shoplite.service.ProductoService;
 
 
 @RestController
-@RequestMapping("/producto")
+@RequestMapping("/productos")
 @CrossOrigin({"*"})
 public class ProductoController {
 	@Autowired
 	ProductoService productoServicio;
 
 	@PostMapping(value = "/saveProductos")
-	public ResponseEntity saveCategoria(@RequestBody Productos product) {
+	public ResponseEntity saveProductos(@RequestBody Productos product) {
 		productoServicio.crearProductos(product);
 		return ResponseEntity.ok("OK");
 	}
 	
 	@GetMapping(path="/list",produces = "application/json")
-	public List<Productos> listarPersonas(){
+	public List<Productos> listarProductos(){
 		return productoServicio.listProductos();
 	}
 }

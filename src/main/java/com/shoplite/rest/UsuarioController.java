@@ -16,20 +16,21 @@ import com.shoplite.service.UsuarioService;
 
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/user")
 @CrossOrigin({"*"})
 public class UsuarioController {
 
 	@Autowired
 	UsuarioService userServicio;
+	
 	@PostMapping(value = "/saveUser")
-	public ResponseEntity saveCategoria(@RequestBody Usuario user) {
+	public ResponseEntity saveUser(@RequestBody Usuario user) {
 		userServicio.crearUsuarios(user);
 		return ResponseEntity.ok("OK");
 	}
 	
 	@GetMapping(path="/listUser",produces = "application/json")
-	public List<Usuario> listarPersonas(){
+	public List<Usuario> listUser(){
 		return userServicio.listUsers();
 	}
 }
