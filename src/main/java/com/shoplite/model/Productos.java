@@ -12,6 +12,7 @@ import lombok.Data;
 public class Productos {
 	@Id
 	public String idProductos;
+	public String nombreProducto;
 	public String idProveedor;
 	public String descripProduct;
 	public double precioProduct;

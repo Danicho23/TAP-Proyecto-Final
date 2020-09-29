@@ -32,4 +32,9 @@ public class ProductoController {
 	public List<Productos> listarProductos(){
 		return productoServicio.listProductos();
 	}
+	
+	@GetMapping(path = "/buscar/{name}", produces = "application/json")
+	public List<Productos> buscarProductsPorNombre(String name){
+		return productoServicio.buscarPorNombre(name);
+	}
 }
