@@ -37,4 +37,8 @@ public class ProductoController {
 	public List<Productos> buscarProductsPorNombre(String name){
 		return productoServicio.buscarPorNombre(name);
 	}
+        @GetMapping(path = "/buscarQuery/{nombreProducto}", produces = "application/json")
+	public List<Productos> findByQuery(String nombreProducto){
+		return productoServicio.findByQuery(nombreProducto);
+	}
 }

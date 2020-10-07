@@ -10,12 +10,13 @@ import lombok.Data;
 //crea en Mongodb la collection
 @Document
 public class Productos {
-	@Id
-	public String idProductos;
-	public String nombreProducto;
-	public String idProveedor;
-	public String descripProduct;
-	public double precioProduct;
-	public String imagen;
-	public String catidadProduct;
+
+    @Id
+    public String idProductos;
+    public String nombreProducto;
+    public String idProveedor;
+    public String descripProduct;
+    public double precioProduct;
+    public String imagen;
+    public String catidadProduct;
 }

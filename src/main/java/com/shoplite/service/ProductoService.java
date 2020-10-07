@@ -23,4 +23,8 @@ public class ProductoService {
 	public List<Productos> buscarPorNombre(String name) {
 		return repoProduct.findBynombreProducto(name);
 	}
+        
+        public List<Productos> findByQuery(String nombreProdcuto) {
+		return repoProduct.findByQuery(nombreProdcuto);
+	}
 }
