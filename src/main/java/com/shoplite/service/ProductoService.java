@@ -10,21 +10,32 @@ import com.shoplite.repository.IProductos;
 
 @Service
 public class ProductoService {
-	@Autowired
+
+    @Autowired
     private IProductos repoProduct;
-	public Productos crearProductos(Productos product) {
-		return repoProduct.save(product);
-	}
-	
-	public List<Productos> listProductos() {
+
+    public Productos crearProductos(Productos product) {
+        return repoProduct.save(product);
+    }
+
+    public List<Productos> listProductos() {
         return repoProduct.findAll();
     }
-	
-	public List<Productos> buscarPorNombre(String name) {
-		return repoProduct.findBynombreProducto(name);
-	}
-        
-        public List<Productos> findByQuery(String nombreProdcuto) {
-		return repoProduct.findByQuery(nombreProdcuto);
-	}
+
+    public List<Productos> buscarPorNombre(String name) {
+        return repoProduct.findBynombreProducto(name);
+    }
+
+    public List<Productos> findByQuery(String nombreProdcuto) {
+        return repoProduct.findByQuery(nombreProdcuto);
+    }
+
+    public String deleteProduct(String id) {
+        repoProduct.deleteById(id);
+        return " removed product : " + id;
+    }
+ 
+    public void update(Productos productos) {
+        repoProduct.save(productos);
+    }
 }
