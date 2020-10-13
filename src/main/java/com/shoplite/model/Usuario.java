@@ -12,8 +12,5 @@ import lombok.Data;
 public class Usuario {
 	@Id
 	public String id;
-	public String id_persona;
-	public String userName;
 	public String password;
-	public String userType;
 }

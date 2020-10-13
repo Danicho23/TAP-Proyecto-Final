@@ -33,4 +33,11 @@ public class UsuarioController {
 	public List<Usuario> listUser(){
 		return userServicio.listUsers();
 	}
+	
+	@GetMapping(path="/buscar/{user},{pass}",produces = "application/json")
+	public Usuario verificarUsuario(String user, String pass) {
+		return userServicio.veficarUser(user, pass);
+	}
+	
+	
 }

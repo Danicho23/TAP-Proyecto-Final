@@ -21,4 +21,8 @@ public class UsuarioService {
 	public List<Usuario> listUsers() {
         return repoUser.findAll();
     }
+	
+	public Usuario veficarUser(String user, String pass) {
+		return repoUser.usuarioByUseryPass(user, pass);
+	}
 }
