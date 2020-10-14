@@ -42,4 +42,8 @@ public class ProvedorController {
     public List<Proveedor> listarProvedor() {
         return servicio.listarProvedor();
     }
+     @GetMapping(path = "/buscarQuery/{nombre}", produces = "application/json")
+    public List<Proveedor> findByQueryProve(String nombre) {
+        return servicio.findByQueryProve(nombre);
+    }
 }

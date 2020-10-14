@@ -7,7 +7,9 @@ package com.shoplite.repository;
 
 import com.shoplite.model.Persona;
 import com.shoplite.model.Proveedor;
+import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,5 +18,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface IProvedor extends MongoRepository<Proveedor, Integer> {
-    
+   
+         @Query("{'nombre': {$regex: ?0 }})")
+         List<Proveedor> findByQueryProve(String nombre);
 }

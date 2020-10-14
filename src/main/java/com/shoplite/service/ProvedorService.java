@@ -28,4 +28,8 @@ public class ProvedorService {
     public List<Proveedor> listarProvedor() {
         return repositorio.findAll();
     }
+    
+    public List<Proveedor> findByQueryProve(String nombre) {
+        return repositorio.findByQueryProve(nombre);
+    }
 }
