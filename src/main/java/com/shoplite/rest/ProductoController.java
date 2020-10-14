@@ -61,7 +61,7 @@ public class ProductoController {
     public String delete(@PathVariable String id) {
         return productoServicio.deleteProduct(id);
     }
-
+//editar
    @PutMapping("/editarProducto/{idProductos}")
     public Productos editarProdcuto (@PathVariable String idProductos, @RequestBody Productos product){
         return productoServicio.crearProductos(product);
