@@ -9,8 +9,11 @@ import com.shoplite.model.Productos;
 import org.springframework.data.mongodb.repository.Query;
 @Repository
 public interface IProductos extends MongoRepository<Productos,String>{
-	List<Productos> findBynombreProducto(String name);
+	List<Productos> findByCategoria(String categoria);
         
          @Query("{'nombreProducto': {$regex: ?0 }})")
          List<Productos> findByQuery(String nombreProducto);
+ 
+         
+         
 }

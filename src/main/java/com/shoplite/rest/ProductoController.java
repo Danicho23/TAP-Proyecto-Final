@@ -40,10 +40,16 @@ public class ProductoController {
     public List<Productos> listarProductos() {
         return productoServicio.listProductos();
     }
+    
 
-    @GetMapping(path = "/buscar/{name}", produces = "application/json")
-    public List<Productos> buscarProductsPorNombre(String name) {
-        return productoServicio.buscarPorNombre(name);
+    @GetMapping(path = "/buscar/{id}", produces = "application/json")
+    public Optional<Productos> buscarProductsPorNombre(String id) {
+        return productoServicio.buscarPorId(id);
+    }
+
+    @GetMapping(path = "/categoria/{categoria}", produces = "application/json")
+    public List<Productos> findByCategoria(String categoria ) {
+        return productoServicio.findByCategoiria(categoria);
     }
 
     @GetMapping(path = "/buscarQuery/{nombreProducto}", produces = "application/json")
@@ -56,9 +62,8 @@ public class ProductoController {
         return productoServicio.deleteProduct(id);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-  public void modifyPetById(@PathVariable("id") String id, @Valid @RequestBody Productos product) {
-    product.setIdProductos(id);
-    productoServicio.crearProductos(product);
-  }
+   @PutMapping("/editarProducto/{idProductos}")
+    public Productos editarProdcuto (@PathVariable String idProductos, @RequestBody Productos product){
+        return productoServicio.crearProductos(product);
+    }
 }

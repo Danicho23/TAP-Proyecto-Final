@@ -19,4 +19,5 @@ public class Productos {
     public double precioProduct;
     public String imagen;
     public String catidadProduct;
+    public String categoria;
 }

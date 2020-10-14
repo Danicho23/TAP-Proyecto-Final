@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.shoplite.model.Productos;
 import com.shoplite.repository.IProductos;
+import java.util.Optional;
 
 @Service
 public class ProductoService {
@@ -22,12 +23,16 @@ public class ProductoService {
         return repoProduct.findAll();
     }
 
-    public List<Productos> buscarPorNombre(String name) {
-        return repoProduct.findBynombreProducto(name);
+    public Optional<Productos> buscarPorId(String id) {
+        return repoProduct.findById(id);
     }
+    
 
     public List<Productos> findByQuery(String nombreProdcuto) {
         return repoProduct.findByQuery(nombreProdcuto);
+    }
+    public List<Productos> findByCategoiria(String categoria) {
+        return repoProduct.findByCategoria(categoria);
     }
 
     public String deleteProduct(String id) {
@@ -35,7 +40,5 @@ public class ProductoService {
         return " removed product : " + id;
     }
  
-    public void update(Productos productos) {
-        repoProduct.save(productos);
-    }
+    
 }
